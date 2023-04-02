@@ -8,7 +8,7 @@ exports.up = function (knex) {
         table.string('username').notNullable()
         table.string('password').notNullable()
         table.string('name').notNullable()
-        table.timestamp(true, true)
+        table.timestamps(true, true)
     })
 };
 

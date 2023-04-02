@@ -45,7 +45,7 @@ exports.up = function (knex) {
             .references('exercises.id')
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
-        table.timestamp(true, true)
+        table.timestamps(true, true)
     })
 };
 

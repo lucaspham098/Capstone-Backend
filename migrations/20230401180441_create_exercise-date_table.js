@@ -19,7 +19,7 @@ exports.up = function (knex) {
         table.integer('set_2')
         table.integer('set_3')
         table.string('comments')
-        table.timestamp(true, true)
+        table.timestamps(true, true)
     })
 };
 
