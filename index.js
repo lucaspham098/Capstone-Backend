@@ -15,9 +15,15 @@ app.use(express.json())
 
 const loginRoute = require('./routes/login')
 const signupRoute = require('./routes/signup')
+const exercisesRoute = require('./routes/exercises')
+const presetWorkoutsRoute = require('./routes/presetWorkouts')
+const workoutDataRoute = require('./routes/exerciseData')
 
 app.use('/login', loginRoute)
 app.use('/signup', signupRoute)
+app.use('/exercises', exercisesRoute)
+app.use('/preset-workouts', presetWorkoutsRoute)
+app.use('/exercise-data', workoutDataRoute)
 
 
 
