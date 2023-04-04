@@ -14,7 +14,7 @@ exports.up = function (knex) {
             .references('exercises.id')
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
-        table.integer('weight(lbs)').notNullable()
+        table.integer('weight_lbs').notNullable()
         table.integer('set_1')
         table.integer('set_2')
         table.integer('set_3')
@@ -28,5 +28,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-    return knex.schema.droptable('exercise-data')
+    return knex.schema.dropTable('exercise-data')
 };
