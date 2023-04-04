@@ -53,3 +53,19 @@ exports.addToWorkout = (req, res) => {
             res.status(400).send(`could not add exercise to a workout ${err}`)
         })
 }
+
+exports.getExceriseDataByID = (req, res) => {
+    const { id } = req.params
+    const { user_id } = req.user
+
+    knex('exercise-data')
+        .select('*')
+        .where('user_id', user_id)
+        .andWhere('exercise_id', id)
+        .then((data) => {
+            res.status(200).send(data)
+        })
+        .catch(err => {
+            res.status(400).send(`unable to get exercise data ${err}`)
+        })
+}
