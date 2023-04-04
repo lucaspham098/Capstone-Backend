@@ -25,7 +25,7 @@ exports.getExercises = (req, res) => {
 
     const { user_id } = req.user
     knex('exercises')
-        .select('exercise_name')
+        .select('exercise_name', 'id')
         .where('user_id', user_id)
         .then((data) => {
             res.status(200).send(data)
