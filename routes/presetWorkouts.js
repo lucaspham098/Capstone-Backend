@@ -7,11 +7,11 @@ const router = express.Router()
 router
     .route('/')
     .post(authenticateToken, createWorkout)
-    .get(authenticateToken, loadWorkout)
+    .get(authenticateToken, getWorkouts)
 
 router
-    .route('/list')
-    .get(authenticateToken, getWorkouts)
+    .route('/:id')
+    .get(authenticateToken, loadWorkout)
 
 
 

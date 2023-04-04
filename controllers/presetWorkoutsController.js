@@ -24,7 +24,7 @@ exports.getWorkouts = (req, res) => {
     const { user_id } = req.user
 
     knex('preset-workouts')
-        .select('workout_name')
+        .select('workout_name', 'id')
         .where('user_id', user_id)
         .then((data) => {
             res.status(200).send(data)
@@ -37,7 +37,7 @@ exports.getWorkouts = (req, res) => {
 
 exports.loadWorkout = (req, res) => {
     const { user_id } = req.user
-    const { workoutID } = req.body
+    const { id } = req.params
 
     knex('exercises')
         .select(
@@ -48,7 +48,7 @@ exports.loadWorkout = (req, res) => {
         )
         .join('preset-workouts', 'preset-workouts.id', 'exercises.workout_id')
         .where('exercises.user_id', user_id)
-        .andWhere('exercises.workout_id', workoutID)
+        .andWhere('exercises.workout_id', id)
         .then((data) => {
             res.status(200).send(data)
         })
