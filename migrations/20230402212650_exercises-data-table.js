@@ -18,6 +18,7 @@ exports.up = function (knex) {
         table.integer('set_1')
         table.integer('set_2')
         table.integer('set_3')
+        table.integer('training_volume')
         table.string('comments')
         table.timestamps(true, true)
     })
