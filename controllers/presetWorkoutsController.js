@@ -56,3 +56,20 @@ exports.loadWorkout = (req, res) => {
             res.status(400).send(`could not retreive workout ${err}`)
         })
 }
+
+exports.loadAllWorkouts = (req, res) => {
+    const { user_id } = req.user
+
+    knex.select('preset-workouts.*', 'exercises.*')
+        .from('preset-workouts')
+        .leftJoin('exercises', 'preset-workouts.id', 'exercises.workout_id')
+        .where('preset-workouts.user_id', user_id)
+        .andWhere('exercises.user_id', user_id)
+        .orderBy('preset-workouts.id')
+        .then((data) => {
+            res.status(200).send(data)
+        })
+        .catch((err) => {
+            res.status(400).send(`could not retreive data ${err}`)
+        })
+}

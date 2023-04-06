@@ -1,6 +1,6 @@
 const express = require('express')
 const { authenticateToken } = require('../controllers/authenticateToken')
-const { createWorkout, getWorkouts, loadWorkout } = require('../controllers/presetWorkoutsController')
+const { createWorkout, getWorkouts, loadWorkout, loadAllWorkouts } = require('../controllers/presetWorkoutsController')
 const router = express.Router()
 
 
