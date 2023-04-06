@@ -60,3 +60,31 @@ exports.getAllDataByWorkout = (req, res) => {
         })
 }
 
+exports.getWorkoutByDate = (req, res) => {
+    const { user_id } = req.user
+    const { id } = req.params
+    const { date } = req.params
+
+    knex('exercises')
+        .select(
+            'exercise-data.created_at',
+            'exercises.exercise_name',
+            'exercise-data.weight_lbs',
+            'exercise-data.set_1',
+            'exercise-data.set_2',
+            'exercise-data.set_3',
+
+        )
+        .join('exercise-data', 'exercise-data.exercise_id', 'exercises.id')
+        .where('exercises.workout_id', id)
+        .andWhere('exercises.user_id', user_id)
+        .andWhere('exercise-data.user_id', user_id)
+        .andWhere('exercise-data.created_at', date)
+        .then((data) => {
+            res.status(200).send(data)
+        })
+        .catch(err => {
+            res.status(400).send(err)
+        })
+}
+
