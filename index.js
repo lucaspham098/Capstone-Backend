@@ -19,7 +19,7 @@ const exercisesRoute = require('./routes/exercises')
 const presetWorkoutsRoute = require('./routes/presetWorkouts')
 const workoutDataRoute = require('./routes/exerciseData')
 const usersRoute = require('./routes/users')
-const allWorkoutsRoute = require('./routes/allworkouts')
+const workoutDatesRoute = require('./routes/workoutDates')
 
 app.use('/login', loginRoute)
 app.use('/signup', signupRoute)
@@ -27,7 +27,7 @@ app.use('/exercises', exercisesRoute)
 app.use('/preset-workouts', presetWorkoutsRoute)
 app.use('/exercise-data', workoutDataRoute)
 app.use('/users', usersRoute)
-app.use('/all-workouts', allWorkoutsRoute)
+app.use('/workout-dates', workoutDatesRoute)
 
 
 

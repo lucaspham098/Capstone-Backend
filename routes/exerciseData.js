@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { authenticateToken } = require('../controllers/authenticateToken')
-const { postExerciseData, getExerciseByDate } = require('../controllers/workoutDataController')
+const { postExerciseData, getExerciseByDate, getAllDataByWorkout } = require('../controllers/workoutDataController')
 
 
 router
