@@ -8,7 +8,7 @@ exports.addExercise = (req, res) => {
     const newItem = {
         id: uuidv4(),
         exercise_name: exercise,
-        user_id: user_id
+        user_id: user_id,
     }
 
     knex('exercises')
