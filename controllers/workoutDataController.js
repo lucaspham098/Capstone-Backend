@@ -3,9 +3,20 @@ const { v4: uuidv4 } = require('uuid');
 
 exports.postExerciseData = (req, res) => {
     const { user_id } = req.user
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+
+    const currentDate = `${year}-${month}-${day}`;
+
+
+
     const newItem = req.body.map(item => {
         return {
             user_id: user_id,
+            id: uuidv4(),
+            date: currentDate,
             ...item
         }
     })
@@ -29,7 +40,7 @@ exports.getExerciseByDate = (req, res) => {
         .select('*')
         .where('user_id', user_id)
         .andWhere('exercise_id', id)
-        .andWhere('created_at', 'like', `${date}%`)
+        .andWhere('date', date)
         .then(data => {
             res.status(200).send(data)
         })
@@ -44,7 +55,7 @@ exports.getAllDataByWorkout = (req, res) => {
 
     knex('exercises')
         .select(
-            'exercise-data.created_at',
+            'exercise-data.date',
             'exercises.exercise_name',
             'exercise-data.weight_lbs'
         )
@@ -67,7 +78,7 @@ exports.getWorkoutByDate = (req, res) => {
 
     knex('exercises')
         .select(
-            'exercise-data.created_at',
+            'exercise-data.date',
             'exercises.exercise_name',
             'exercise-data.weight_lbs',
             'exercise-data.set_1',
@@ -79,7 +90,7 @@ exports.getWorkoutByDate = (req, res) => {
         .where('exercises.workout_id', id)
         .andWhere('exercises.user_id', user_id)
         .andWhere('exercise-data.user_id', user_id)
-        .andWhere('exercise-data.created_at', date)
+        .andWhere('exercise-data.date', date)
         .then((data) => {
             res.status(200).send(data)
         })

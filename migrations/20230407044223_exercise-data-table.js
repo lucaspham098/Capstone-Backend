@@ -5,21 +5,28 @@
 exports.up = function (knex) {
     return knex.schema.createTable("exercise-data", (table) => {
         table
+            .uuid('id').primary()
+            .notNullable()
+        table
             .uuid("user_id")
             .references("users.id")
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
+            .notNullable()
+
         table
             .uuid('exercise_id')
             .references('exercises.id')
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
+            .notNullable()
+
         table.integer('weight_lbs').notNullable()
-        table.integer('set_1')
-        table.integer('set_2')
-        table.integer('set_3')
-        table.integer('training_volume')
-        table.string('comments')
+        table.integer('set_1').notNullable()
+        table.integer('set_2').notNullable()
+        table.integer('set_3').notNullable()
+        table.integer('training_volume').notNullable()
+        table.date('date').notNullable()
         table.timestamps(true, true)
     })
 };
@@ -31,3 +38,4 @@ exports.up = function (knex) {
 exports.down = function (knex) {
     return knex.schema.dropTable('exercise-data')
 };
+

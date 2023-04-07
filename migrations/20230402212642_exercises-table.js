@@ -11,11 +11,13 @@ exports.up = function (knex) {
             .references('users.id')
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
+            .notNullable()
         table
             .uuid('workout_id')
             .references('preset-workouts.id')
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
+            .notNullable()
         table.timestamps(true, true)
     })
 };

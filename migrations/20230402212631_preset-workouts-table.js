@@ -11,6 +11,7 @@ exports.up = function (knex) {
             .references('users.id')
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
+            .notNullable()
         table.timestamps(true, true)
     })
 };
