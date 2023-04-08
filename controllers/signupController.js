@@ -1,21 +1,26 @@
 const knex = require("knex")(require('../knexfile'))
 const { v4: uuidv4 } = require('uuid');
+const bcrypt = require('bcrypt')
 
 
-exports.createNewUser = (req, res) => {
+exports.createNewUser = async (req, res) => {
 
-    const newUser = {
-        id: uuidv4(),
-        ...req.body
+    try {
+        const { username, password, name } = req.body
+        const hash = await bcrypt.hash(password, 10)
+
+        await knex('users')
+            .insert({
+                id: uuidv4(),
+                username: username,
+                password: hash,
+                name: name
+            })
+            .then(() => {
+                res.status(201).send('new user created')
+            })
+    } catch (err) {
+        console.log(err)
+        res.status(400).send(`could not create new user ${err}`)
     }
-
-    knex('users')
-        .insert(newUser)
-        .then(() => {
-            res.status(201).send('New user created')
-        })
-        .catch((err) => {
-            res.status(400).send(`could not sign up${err}`)
-        })
-
 }

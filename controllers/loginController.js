@@ -2,35 +2,29 @@ const knex = require("knex")(require('../knexfile'))
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 const jsonSECRETKEY = process.env.jsonSECRETKEY
+const bcrypt = require('bcrypt')
 
 
 
-exports.login = (req, res) => {
-    const { username, password } = req.body;
+exports.login = async (req, res) => {
 
-    knex('users')
-        .select('id', 'name')
-        .where({ username: username, password: password })
-        .then((data) => {
-            if (data.length === 0) {
-                return res.status(403).send({
-                    token: "",
-                    error: {
-                        message: "Error logging in. Invalid username/password combination.",
-                    },
-                })
+    try {
+        const { username, password } = req.body;
+        const user = await knex('users').first().where('username', username);
+        console.log(user);
+        console.log(password)
+        console.log(user.password)
+        if (user) {
+            const validPass = await bcrypt.compare(password, user.password);
+            if (validPass) {
+                res.status(201).send({ token: jwt.sign({ name: user.name, user_id: user.id }, jsonSECRETKEY) });
             } else {
-                res.send({ token: jwt.sign({ name: data[0].name, user_id: data[0].id }, jsonSECRETKEY) })
-                // console.log(req.user)
+                res.status(400).send('Password does not match');
             }
-        })
-        .catch((err) => {
-            res.status(400).send(err)
-        })
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(400).send('User not found');
+    }
 
-}
-
-exports.test = (req, res) => {
-    console.log(req.user)
-    res.send('hkjhgkjsdhfghsdkjfghs')
 }
