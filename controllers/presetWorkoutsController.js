@@ -56,3 +56,30 @@ exports.loadWorkout = (req, res) => {
             res.status(400).send(`could not retreive workout ${err}`)
         })
 }
+
+exports.deleteWorkout = (req, res) => {
+    const { user_id } = req.user
+    const { id } = req.params
+
+    knex('exercises')
+        .update('workout_id', null)
+        .where('user_id', user_id)
+        .andWhere('workout_id', id)
+        .then(() => {
+            knex('preset-workouts')
+                .delete()
+                .where('user_id', user_id)
+                .andWhere('id', id)
+                .then(() => {
+                    res.status(200).send('item deleted')
+                })
+                .catch(err => {
+                    res.status(400).send(`item not deleted ${err}`)
+                    console.log(err)
+                })
+        })
+        .catch((err) => {
+            res.status(400).send(`unable to change workout_id of exercise ${err}`)
+            console.log(err)
+        })
+}

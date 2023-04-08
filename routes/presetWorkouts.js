@@ -1,6 +1,6 @@
 const express = require('express')
 const { authenticateToken } = require('../controllers/authenticateToken')
-const { createWorkout, getWorkouts, loadWorkout, loadAllWorkouts } = require('../controllers/presetWorkoutsController')
+const { createWorkout, getWorkouts, loadWorkout, loadAllWorkouts, deleteWorkout } = require('../controllers/presetWorkoutsController')
 const router = express.Router()
 
 
@@ -12,7 +12,6 @@ router
 router
     .route('/:id')
     .get(authenticateToken, loadWorkout)
-
-
+    .delete(authenticateToken, deleteWorkout)
 
 module.exports = router

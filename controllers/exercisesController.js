@@ -36,7 +36,7 @@ exports.getExercises = (req, res) => {
 
 }
 
-exports.addToWorkout = (req, res) => {
+exports.editWorkoutID = (req, res) => {
     const { user_id } = req.user
 
     const promises = req.body.map(item => {
