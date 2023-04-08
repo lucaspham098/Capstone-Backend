@@ -1,6 +1,6 @@
 const express = require('express')
 const { authenticateToken } = require('../controllers/authenticateToken')
-const { addExercise, getExercises, addToWorkout, getExceriseDataByID } = require('../controllers/exercisesController')
+const { addExercise, getExercises, addToWorkout, getExceriseDataByID, getExercisesNotInWorkout } = require('../controllers/exercisesController')
 const router = express.Router()
 
 router
@@ -10,7 +10,11 @@ router
     .patch(authenticateToken, addToWorkout)
 
 router
-    .route('/:id')
+    .route('/id/:id')
     .get(authenticateToken, getExceriseDataByID)
+
+router
+    .route('/no-workout')
+    .get(authenticateToken, getExercisesNotInWorkout)
 
 module.exports = router

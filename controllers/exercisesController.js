@@ -37,22 +37,26 @@ exports.getExercises = (req, res) => {
 }
 
 exports.addToWorkout = (req, res) => {
-    const { workoutID, exerciseID } = req.body
-    const workout = {
-        workout_id: workoutID,
-        id: exerciseID
-    }
+    const { user_id } = req.user
 
-    knex('exercises')
-        .update(workout)
-        .where('id', exerciseID)
+    const promises = req.body.map(item => {
+        return knex('exercises')
+            .update(item)
+            .where('id', item.id)
+            .andWhere("user_id", user_id)
+    })
+
+    Promise.all(promises)
         .then(() => {
             res.status(201).send('exercise now part of a workout')
         })
         .catch((err) => {
             res.status(400).send(`could not add exercise to a workout ${err}`)
+            console.log(err)
         })
 }
+
+
 
 exports.getExceriseDataByID = (req, res) => {
     const { id } = req.params
@@ -67,5 +71,21 @@ exports.getExceriseDataByID = (req, res) => {
         })
         .catch(err => {
             res.status(400).send(`unable to get exercise data ${err}`)
+        })
+}
+
+exports.getExercisesNotInWorkout = (req, res) => {
+    const { user_id } = req.user
+
+    knex('exercises')
+        .select('id', 'exercise_name')
+        .where('workout_id', null)
+        .andWhere('user_id', user_id)
+        .then(data => {
+            res.status(200).send(data)
+        })
+        .catch(err => {
+            res.status(400).send(err)
+            console.log(err)
         })
 }
