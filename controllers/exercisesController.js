@@ -89,3 +89,19 @@ exports.getExercisesNotInWorkout = (req, res) => {
             console.log(err)
         })
 }
+
+exports.deleteExercise = (req, res) => {
+    const { user_id } = req.user
+    const { id } = req.params
+
+    knex('exercises')
+        .delete()
+        .where('user_id', user_id)
+        .andWhere('id', id)
+        .then(() => {
+            res.status(200).send('exercise deleted')
+        })
+        .catch(err => {
+            res.status(400).send(`unable to delete item ${err}`)
+        })
+}

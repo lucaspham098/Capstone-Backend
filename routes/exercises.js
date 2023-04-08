@@ -1,6 +1,6 @@
 const express = require('express')
 const { authenticateToken } = require('../controllers/authenticateToken')
-const { addExercise, getExercises, getExceriseDataByID, getExercisesNotInWorkout, editWorkoutID } = require('../controllers/exercisesController')
+const { addExercise, getExercises, getExceriseDataByID, getExercisesNotInWorkout, editWorkoutID, deleteExercise } = require('../controllers/exercisesController')
 const router = express.Router()
 
 router
@@ -14,6 +14,7 @@ router
 router
     .route('/id/:id')
     .get(authenticateToken, getExceriseDataByID)
+    .delete(authenticateToken, deleteExercise)
 
 router
     .route('/no-workout')
