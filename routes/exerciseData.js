@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { authenticateToken } = require('../controllers/authenticateToken')
-const { postExerciseData, getExerciseByDate, getAllDataByWorkout, getWorkoutByDate } = require('../controllers/workoutDataController')
+const { postExerciseData, getExerciseByDate, getAllDataByWorkout, getWorkoutByDate, getDataByDate } = require('../controllers/workoutDataController')
 
 
 router
@@ -15,6 +15,10 @@ router
 router
     .route('/dates/:id')
     .get(authenticateToken, getAllDataByWorkout)
+
+router
+    .route('/current-day/:date')
+    .get(authenticateToken, getDataByDate)
 
 router
     .route('/workouts/:id/:date')
