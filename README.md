@@ -1,9 +1,28 @@
 This project is a web application that helps you track your workouts and progress. It lets you document your workouts and compare your performance over time, using visual cues to show if you've improved or not in each exercise. With this app, you'll be able to easily monitor your fitness goals and stay motivated to reach them.
 
-New users will first populate the exercises page with their desired exercises. Then they will populate the workouts page with their workouts. They will then add the exercises to the workouts. An exercise can only belong to one workout. The user will then be able to load their workout on the home page where they will fill in the fields and press the button to finish their workout. The workout that they completed that day will populate the homepage. The workout history will then be present when the user presses a workout card on the workouts page. Exercise history and the progression data will also be present when a workout with the exercise in it had be completed. Right now the user can only do one workout a day. That will be changed in the future. Future implementation include but are not limited to:
+New users will first have to sign up and then login. They will have to first populate the exercises page with their desired exercises. Then they will populate the workouts page with their workouts. They will then add the exercises to the workouts. An exercise can only belong to one workout. The user will then be able to load their workout on the home page where they will fill in the fields and press the button to finish their workout. The workout that they completed that day will populate the homepage. The workout history will then be present when the user presses a workout card on the workouts page. Exercise history and the progression data will also be present when a workout with the exercise in it had be completed. Right now the user can only do one workout a day. That will be changed in the future. Future implementation includes but not limited to;
 - Animations for smoother user experience
 - Dark theme and light theme
 - A timer for users who want to document workouts in real-time, allowing them to time their breaks
-- Ability to add more than 3 sets for each exercise 
+- Ability to add more than 3 sets for each exercise
+
+The tech stack that was used was;
+- REACT
+- SASS
+- NODE.js
+- Express
+- Knex.js
+
+Backend Instructions:
+- in terminal type "npm i"
+- create .env file following sample file
+- then in terminal type "npx knex migrations:latest"
+    - if that doesn't work migrate the files in this order; users, preset-workouts, exercises, exercise-data
+- if you decide to seed the data to see how the app would look like for a existing user, in terminal type "npx knex seed:run"
+    - if that doesn't work, seed the data in the same order as the migrations
+- npm run dev to start server
+
+
+
 
 
