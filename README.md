@@ -22,6 +22,12 @@ Backend Instructions:
     - if that doesn't work, seed the data in the same order as the migrations
 - npm run dev to start server
 
+Frontend Instructions:
+- in terminal type "npm i"
+- set up .env file following the sample file
+- ensure backend is running
+- npm start
+
 
 
 
