@@ -17,7 +17,6 @@ exports.up = function (knex) {
             .references('preset-workouts.id')
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
-            .notNullable()
         table.timestamps(true, true)
     })
 };
