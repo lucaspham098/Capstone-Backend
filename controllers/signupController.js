@@ -24,3 +24,11 @@ exports.createNewUser = async (req, res) => {
         res.status(400).send(`could not create new user ${err}`)
     }
 }
+
+exports.getUsers = (req, res) => {
+    knex('users')
+        .select('username')
+        .then((data) => {
+            res.status(200).send(data)
+        })
+}
