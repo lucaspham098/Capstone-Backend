@@ -10,7 +10,7 @@ exports.seed = async function (knex) {
             id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
             username: 'lucaspham098',
             password: 'omg',
-            name: 'omg'
+            name: 'Lucas'
         }
     ]);
 };

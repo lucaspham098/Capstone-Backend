@@ -11,9 +11,6 @@ exports.login = async (req, res) => {
     try {
         const { username, password } = req.body;
         const user = await knex('users').first().where('username', username);
-        console.log(user);
-        console.log(password)
-        console.log(user.password)
         if (user) {
             const validPass = await bcrypt.compare(password, user.password);
             if (validPass) {
