@@ -21,7 +21,7 @@ exports.login = async (req, res) => {
         }
     } catch (err) {
         console.log(err);
-        res.status(400).send('User not found');
+        res.status(400).send(`User not found ${err}`);
     }
 
 }
