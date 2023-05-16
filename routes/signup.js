@@ -7,5 +7,8 @@ router.use(express.json())
 
 router.route('/')
     .post(createNewUser)
+    .get((req, res) => {
+        res.send('signup')
+    })
 
 module.exports = router
