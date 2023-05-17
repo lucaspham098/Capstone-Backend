@@ -46,7 +46,6 @@ exports.postExerciseData = (req, res) => {
             set_1: item.set_1,
             set_2: item.set_2,
             set_3: item.set_3,
-            total_reps: item.total_reps,
             training_volume: item.training_volume,
         };
     });
