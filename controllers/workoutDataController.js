@@ -3,23 +3,53 @@ const { v4: uuidv4 } = require('uuid');
 
 exports.postExerciseData = (req, res) => {
     const { user_id } = req.user
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
+    // const today = new Date();
+    // const year = today.getFullYear();
+    // const month = String(today.getMonth() + 1).padStart(2, '0');
+    // const day = String(today.getDate()).padStart(2, '0');
 
-    const currentDate = `${year}-${month}-${day}`;
+    // const currentDate = `${year}-${month}-${day}`;
 
 
+
+    // const newItem = req.body.map(item => {
+
+    //     const clientDate = new Date(item.dateBody.currentDate);
+    //     const timeZoneOffsetMinutes = parseInt(item.dateBody.timeZoneOffset);
+    //     const serverDate = new Date(clientDate.getTime() + (timeZoneOffsetMinutes * 60000));
+
+    //     return {
+    //         user_id: user_id,
+    //         id: uuidv4(),
+    //         date: serverDate.toISOString(),
+    //         exercise_id: item.exercise_id,
+    //         weight_lbs: item.weight_lbs,
+    //         set_1: item.set_1,
+    //         set_2: item.set_2,
+    //         set_3: item.set_3,
+    //         toal_reps: item.total_reps,
+    //         training_volume: item.training_volume,
+    //     }
+    // })
 
     const newItem = req.body.map(item => {
+        const clientDate = new Date(item.dateBody.currentDate);
+        const timeZoneOffsetMinutes = parseInt(item.dateBody.timeZoneOffset);
+        const serverDate = new Date(clientDate.getTime() + (timeZoneOffsetMinutes * 60000));
+
         return {
             user_id: user_id,
             id: uuidv4(),
-            date: currentDate,
-            ...item
-        }
-    })
+            date: serverDate.toISOString(),
+            exercise_id: item.exercise_id,
+            weight_lbs: item.weight_lbs,
+            set_1: item.set_1,
+            set_2: item.set_2,
+            set_3: item.set_3,
+            total_reps: item.total_reps,
+            training_volume: item.training_volume,
+        };
+    });
 
     knex('exercise-data')
         .insert(newItem)
@@ -28,6 +58,7 @@ exports.postExerciseData = (req, res) => {
         })
         .catch((err) => {
             res.status(400).send(`unable to add exercise data ${err}`)
+            res.status(400).send(newItem)
         })
 }
 
