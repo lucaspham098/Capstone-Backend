@@ -6,10 +6,10 @@ const PORT = process.env.PORT ?? 5050
 const CLIENT_URL = process.env.CLIENT_URL
 
 
-app.use(cors({
-    origin: CLIENT_URL
-}))
-// app.use(cors());
+// app.use(cors({
+//     origin: CLIENT_URL
+// }))
+app.use(cors());
 
 
 app.use(express.json())
