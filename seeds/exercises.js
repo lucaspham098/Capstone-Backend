@@ -26,7 +26,7 @@ exports.seed = async function (knex) {
     },
     {
       id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
-      exercise_name: 'SA Tricep Pushdown',
+      exercise_name: 'Tricep Pushdown',
       workout_id: '5261168c-6bcb-4e2e-9428-012905780a6e',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
     },
@@ -38,7 +38,7 @@ exports.seed = async function (knex) {
     },
     {
       id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
-      exercise_name: 'SA Overhead Extension',
+      exercise_name: 'Tricep Extension',
       workout_id: '5261168c-6bcb-4e2e-9428-012905780a6e',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
     },

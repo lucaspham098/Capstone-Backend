@@ -7,7 +7,6 @@ const bcrypt = require('bcrypt')
 
 
 exports.login = async (req, res) => {
-
     try {
         const { username, password } = req.body;
         const user = await knex('users').first().where('username', username);
@@ -16,12 +15,13 @@ exports.login = async (req, res) => {
             if (validPass) {
                 res.status(201).send({ token: jwt.sign({ name: user.name, user_id: user.id }, jsonSECRETKEY) });
             } else {
-                res.status(400).send('Password does not match');
+                res.status(400).send('Incorrect password');
             }
+        } else {
+            res.status(404).send('User not found');
         }
     } catch (err) {
         console.log(err);
-        res.status(400).send(`User not found ${err}`);
+        res.status(500).send(`Error occurred: ${err}`);
     }
-
 }
