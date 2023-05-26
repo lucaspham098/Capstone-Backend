@@ -8,7 +8,7 @@ exports.seed = async function (knex) {
   await knex(`exercise-data`).insert([
     //ARMS
     {
-      id: '8fe6d0fd-015f-4cf8-bd28-1',
+      id: 'd6d1c8ae-7543-4056-b29f-27bbd7fbbc4b',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '2922c286-16cd-4d43-ab98-c79f698aeab0',
       weight_lbs: 55,
@@ -19,7 +19,7 @@ exports.seed = async function (knex) {
       date: '2023-04-01',
     },
     {
-      id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
+      id: 'b609cd70-19a6-4579-9979-f636e7dddf11',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
       weight_lbs: 35,
@@ -30,7 +30,7 @@ exports.seed = async function (knex) {
       date: '2023-04-01',
     },
     {
-      id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+      id: '17ee531f-4d0e-4f79-aa9e-42df6b87c348',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
       weight_lbs: 25,
@@ -41,7 +41,7 @@ exports.seed = async function (knex) {
       date: '2023-04-01',
     },
     {
-      id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
+      id: '214e5b31-33fd-4938-ae8f-1e31b0f06489',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
       weight_lbs: 30,
@@ -52,7 +52,7 @@ exports.seed = async function (knex) {
       date: '2023-04-01',
     },
     {
-      id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
+      id: '1bbef6e8-5816-4740-b032-cc789fb85b5e',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
       weight_lbs: 20,
@@ -63,7 +63,7 @@ exports.seed = async function (knex) {
       date: '2023-04-01',
     },
     {
-      id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
+      id: 'dd52c1b6-bbd1-4132-a923-9af4b393b255',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
       weight_lbs: 15,
@@ -75,7 +75,7 @@ exports.seed = async function (knex) {
     },
     // Workout 1 - Arms, Date 2
     {
-      id: '8fe6d0fd-015f-4cf8-bd28-2',
+      id: 'dc715a69-0bbf-48c6-9d82-55351e6e7613',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '2922c286-16cd-4d43-ab98-c79f698aeab0',
       weight_lbs: 60,
@@ -86,7 +86,7 @@ exports.seed = async function (knex) {
       date: '2023-04-02',
     },
     {
-      id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
+      id: '4ee608ea-c79a-47c8-b78e-bd6bc7ac41e1',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
       weight_lbs: 40,
@@ -97,7 +97,7 @@ exports.seed = async function (knex) {
       date: '2023-04-02',
     },
     {
-      id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+      id: '24b0a3e2-64d3-4d2a-ade7-0d6385eae5c6',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
       weight_lbs: 30,
@@ -108,7 +108,7 @@ exports.seed = async function (knex) {
       date: '2023-04-02',
     },
     {
-      id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
+      id: 'e3398235-bf52-4e12-bf07-2e8f9873c771',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
       weight_lbs: 35,
@@ -119,7 +119,7 @@ exports.seed = async function (knex) {
       date: '2023-04-02',
     },
     {
-      id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
+      id: '2a369377-0bdc-4fb8-be91-7142cc6aa020',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
       weight_lbs: 25,
@@ -130,7 +130,7 @@ exports.seed = async function (knex) {
       date: '2023-04-02',
     },
     {
-      id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
+      id: '95b706c0-e864-4ddc-8a45-85612afff0d0',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
       weight_lbs: 20,
@@ -141,7 +141,7 @@ exports.seed = async function (knex) {
       date: '2023-04-02',
     },
     {
-      id: '8fe6d0fd-015f-4cf8-bd28-3',
+      id: '9a75dc2d-3c70-43e1-a25b-acfd24fd5200',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '2922c286-16cd-4d43-ab98-c79f698aeab0',
       weight_lbs: 55,
@@ -152,7 +152,7 @@ exports.seed = async function (knex) {
       date: '2023-04-03',
     },
     {
-      id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
+      id: '232ba34c-38ef-4cb1-8295-f04da7a68923',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
       weight_lbs: 35,
@@ -163,7 +163,7 @@ exports.seed = async function (knex) {
       date: '2023-04-03',
     },
     {
-      id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+      id: '79b2fb3c-ff40-479c-89c8-a06edfc70c55',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
       weight_lbs: 25,
@@ -174,7 +174,7 @@ exports.seed = async function (knex) {
       date: '2023-04-03',
     },
     {
-      id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
+      id: '0bbabba6-441c-4a64-b928-e69668f0d8cf',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
       weight_lbs: 30,
@@ -185,7 +185,7 @@ exports.seed = async function (knex) {
       date: '2023-04-03',
     },
     {
-      id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
+      id: 'b69a723d-9d96-4754-85ce-d62ad6a1cf8e',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
       weight_lbs: 20,
@@ -196,7 +196,7 @@ exports.seed = async function (knex) {
       date: '2023-04-03',
     },
     {
-      id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
+      id: 'e00fbad8-6858-4009-9aa6-57faa55ebb43',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
       weight_lbs: 20,
@@ -207,7 +207,7 @@ exports.seed = async function (knex) {
       date: '2023-04-03',
     },
     {
-      id: '8fe6d0fd-015f-4cf8-bd28-4',
+      id: '4fd43ace-e731-4e36-9706-06f21a67abf8',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '2922c286-16cd-4d43-ab98-c79f698aeab0',
       weight_lbs: 50,
@@ -218,7 +218,7 @@ exports.seed = async function (knex) {
       date: '2023-04-04',
     },
     {
-      id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
+      id: 'ba711848-1b1c-4ae0-96e9-a34940e25148',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
       weight_lbs: 30,
@@ -229,7 +229,7 @@ exports.seed = async function (knex) {
       date: '2023-04-04',
     },
     {
-      id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+      id: '0e0b6c39-3088-447b-8f74-dd9acf3649dd',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
       weight_lbs: 20,
@@ -240,7 +240,7 @@ exports.seed = async function (knex) {
       date: '2023-04-04',
     },
     {
-      id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
+      id: '65555286-dd19-4b89-9e35-b906797e424d',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
       weight_lbs: 25,
@@ -251,7 +251,7 @@ exports.seed = async function (knex) {
       date: '2023-04-04',
     },
     {
-      id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
+      id: 'a6fa0880-47a0-4927-abff-3766d1ff3cb2',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
       weight_lbs: 20,
@@ -262,7 +262,7 @@ exports.seed = async function (knex) {
       date: '2023-04-04',
     },
     {
-      id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
+      id: 'fe1ace3b-9393-4a56-845c-2c815cece925',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
       weight_lbs: 20,
@@ -273,7 +273,7 @@ exports.seed = async function (knex) {
       date: '2023-04-04',
     },
     {
-      id: '8fe6d0fd-015f-4cf8-bd28-5',
+      id: '0601f9f6-a1bc-42ce-b65a-ac219b2a906d',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '2922c286-16cd-4d43-ab98-c79f698aeab0',
       weight_lbs: 45,
@@ -284,7 +284,7 @@ exports.seed = async function (knex) {
       date: '2023-04-05',
     },
     {
-      id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
+      id: '6cd931f3-aa19-481e-9944-73d129f2b6da',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '5bf7bd6c-2b16-4129-bddc-9d37ff8539e9',
       weight_lbs: 35,
@@ -295,7 +295,7 @@ exports.seed = async function (knex) {
       date: '2023-04-05',
     },
     {
-      id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
+      id: '5b9ee576-4e30-463d-9956-6ff34b4d3244',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '90ac3319-70d1-4a51-b91d-ba6c2464408c',
       weight_lbs: 15,
@@ -306,7 +306,7 @@ exports.seed = async function (knex) {
       date: '2023-04-05',
     },
     {
-      id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
+      id: '2f2e6d37-8de9-436a-90bc-878df27a50db',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: 'bfc9bea7-66f1-44e9-879b-4d363a888eb4',
       weight_lbs: 20,
@@ -317,7 +317,7 @@ exports.seed = async function (knex) {
       date: '2023-04-05',
     },
     {
-      id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
+      id: '75c5f380-1435-4bb3-a419-b2797d00fab2',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '89898957-04ba-4bd0-9f5c-a7aea7447963',
       weight_lbs: 15,
@@ -328,7 +328,7 @@ exports.seed = async function (knex) {
       date: '2023-04-05',
     },
     {
-      id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
+      id: 'c4570478-95e0-4bcd-ae3c-637b48c9fe10',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
       exercise_id: '62d123fc-3ab5-44a9-a594-c57a9e3b533c',
       weight_lbs: 25,
@@ -636,7 +636,7 @@ exports.seed = async function (knex) {
       set_1: 6,
       set_2: 6,
       set_3: 6,
-      training_volume: 0,
+      training_volume: 2880,
       date: '2023-04-10',
     },
     {
@@ -702,7 +702,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 8,
-      training_volume: 0,
+      training_volume: 3360,
       date: '2023-04-11',
     },
     {
@@ -768,7 +768,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 10,
       set_3: 10,
-      training_volume: 0,
+      training_volume: 4200,
       date: '2023-04-15',
     },
     {
@@ -834,7 +834,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 12,
       set_3: 8,
-      training_volume: 0,
+      training_volume: 4650,
       date: '2023-04-28',
     },
     {
@@ -883,9 +883,9 @@ exports.seed = async function (knex) {
     },
     //chest/back(lats)
     {
-      id: 'b9c4ff10-7ed6-42a9-bdcb-bd8d59d50d37',
+      id: 'b9c4ff10-7ed6-42a9-bdcb-bd8d59d50d39',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: 'a6ceeeb4-fa14-41be-a097-24fd78facd1c',
+      exercise_id: 'b3bf7d64-e1e3-4c3c-949e-53d157be7596',
       weight_lbs: 55,
       set_1: 12,
       set_2: 10,
@@ -896,7 +896,7 @@ exports.seed = async function (knex) {
     {
       id: 'c46f0e4d-1a4e-42d5-a0f7-45c180f2d16e',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '7df8931b-94fb-45a2-b482-437bb780dd54',
+      exercise_id: '9850541b-e882-49ab-ba23-b70d14c34e3f',
       weight_lbs: 70,
       set_1: 10,
       set_2: 8,
@@ -907,7 +907,7 @@ exports.seed = async function (knex) {
     {
       id: '0fd6348b-1f33-4e9f-88f9-5e39f6d93a71',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: 'c7f6d5ab-1bca-4b92-b7e9-c2a7a5d6692f',
+      exercise_id: '685e9424-049e-4a70-bb04-dc7aba2c01c5',
       weight_lbs: 40,
       set_1: 15,
       set_2: 12,
@@ -918,7 +918,7 @@ exports.seed = async function (knex) {
     {
       id: '55e9fc75-2a3f-43e4-90f1-4e7e2174f4c3',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: 'd144187a-39d5-47a0-a3a9-3b90650fb9a9',
+      exercise_id: 'e43ba249-664b-4637-ba55-40672e3e7a9d',
       weight_lbs: 60,
       set_1: 10,
       set_2: 8,
@@ -929,7 +929,7 @@ exports.seed = async function (knex) {
     {
       id: 'e0a8eaae-7856-49e1-82d2-8f547f41b8e4',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '27c956e0-042f-46ce-8b67-4cbef249de8f',
+      exercise_id: '0272486c-95e3-4405-90c3-cb495bd229a9',
       weight_lbs: 50,
       set_1: 12,
       set_2: 10,
@@ -1048,9 +1048,9 @@ exports.seed = async function (knex) {
       date: '2023-05-05',
     },
     {
-      id: 'b3bf7d64-e1e3-4c3c-949e-53d157be7596',
+      id: '5d1e00bb-c8ec-4971-ab18-214885652b27',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: 'b3bf7d64-e1e3-4c3c-949e-53d157be7596',
       weight_lbs: 135,
       set_1: 8,
       set_2: 6,
@@ -1059,9 +1059,9 @@ exports.seed = async function (knex) {
       date: '2023-05-12',
     },
     {
-      id: '9850541b-e882-49ab-ba23-b70d14c34e3f',
+      id: '6d5aa51e-60fa-4398-aeed-a9a59ba3869d',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: '9850541b-e882-49ab-ba23-b70d14c34e3f',
       weight_lbs: 85,
       set_1: 12,
       set_2: 10,
@@ -1070,9 +1070,9 @@ exports.seed = async function (knex) {
       date: '2023-05-12',
     },
     {
-      id: '685e9424-049e-4a70-bb04-dc7aba2c01c5',
+      id: '9110c2b5-9c17-4ba4-8b20-1999f6987ff2',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: '685e9424-049e-4a70-bb04-dc7aba2c01c5',
       weight_lbs: 70,
       set_1: 12,
       set_2: 10,
@@ -1081,9 +1081,9 @@ exports.seed = async function (knex) {
       date: '2023-05-12',
     },
     {
-      id: 'e43ba249-664b-4637-ba55-40672e3e7a9d',
+      id: 'c9a0fb9b-6a79-4757-a346-4537953c8463',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: 'e43ba249-664b-4637-ba55-40672e3e7a9d',
       weight_lbs: 155,
       set_1: 6,
       set_2: 4,
@@ -1092,9 +1092,9 @@ exports.seed = async function (knex) {
       date: '2023-05-12',
     },
     {
-      id: '0272486c-95e3-4405-90c3-cb495bd229a9',
+      id: '71d4ccbf-9b5a-4e8e-b4dd-c776ce2c6cc7',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: '0272486c-95e3-4405-90c3-cb495bd229a9',
       weight_lbs: 95,
       set_1: 12,
       set_2: 10,
@@ -1103,9 +1103,9 @@ exports.seed = async function (knex) {
       date: '2023-05-12',
     },
     {
-      id: 'b3bf7d64-e1e3-4c3c-949e-53d157be7596',
+      id: 'f0b4cbae-3877-46fc-ba79-49edb458a11b',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: 'b3bf7d64-e1e3-4c3c-949e-53d157be7596',
       weight_lbs: 140,
       set_1: 10,
       set_2: 8,
@@ -1114,9 +1114,9 @@ exports.seed = async function (knex) {
       date: '2023-06-05',
     },
     {
-      id: '9850541b-e882-49ab-ba23-b70d14c34e3f',
+      id: '73909e29-5e24-4e4b-b721-29a258df8fe6',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: '9850541b-e882-49ab-ba23-b70d14c34e3f',
       weight_lbs: 90,
       set_1: 12,
       set_2: 10,
@@ -1125,9 +1125,9 @@ exports.seed = async function (knex) {
       date: '2023-06-05',
     },
     {
-      id: '685e9424-049e-4a70-bb04-dc7aba2c01c5',
+      id: '5378103d-8a7d-467e-ab6e-65ab670cd42a',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: '685e9424-049e-4a70-bb04-dc7aba2c01c5',
       weight_lbs: 75,
       set_1: 12,
       set_2: 10,
@@ -1136,9 +1136,9 @@ exports.seed = async function (knex) {
       date: '2023-06-05',
     },
     {
-      id: 'e43ba249-664b-4637-ba55-40672e3e7a9d',
+      id: '24440c91-b28d-4abe-a7cf-e018d5ecc286',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: 'e43ba249-664b-4637-ba55-40672e3e7a9d',
       weight_lbs: 160,
       set_1: 6,
       set_2: 4,
@@ -1147,9 +1147,9 @@ exports.seed = async function (knex) {
       date: '2023-06-05',
     },
     {
-      id: '0272486c-95e3-4405-90c3-cb495bd229a9',
+      id: '72e9f87b-4166-49ef-8ccb-26cdc93cd0e1',
       user_id: '036fa1ff-e605-4776-bc46-622cad4c9ebd',
-      exercise_id: '93969f34-634d-4127-9563-1047771b45ff',
+      exercise_id: '0272486c-95e3-4405-90c3-cb495bd229a9',
       weight_lbs: 100,
       set_1: 12,
       set_2: 10,
