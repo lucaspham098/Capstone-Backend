@@ -59,7 +59,7 @@ exports.seed = async function (knex) {
       set_1: 9,
       set_2: 9,
       set_3: 8,
-      training_volume: 720,
+      training_volume: 520,
       date: '2023-04-01',
     },
     {
@@ -70,7 +70,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 10,
-      training_volume: 530,
+      training_volume: 480,
       date: '2023-04-01',
     },
     // Workout 1 - Arms, Date 2
@@ -93,7 +93,7 @@ exports.seed = async function (knex) {
       set_1: 7,
       set_2: 6,
       set_3: 6,
-      training_volume: 740,
+      training_volume: 760,
       date: '2023-04-02',
     },
     {
@@ -126,7 +126,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 7,
-      training_volume: 675,
+      training_volume: 575,
       date: '2023-04-02',
     },
     {
@@ -137,7 +137,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 10,
       set_3: 9,
-      training_volume: 710,
+      training_volume: 580,
       date: '2023-04-02',
     },
     {
@@ -192,7 +192,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 10,
       set_3: 9,
-      training_volume: 700,
+      training_volume: 580,
       date: '2023-04-03',
     },
     {
@@ -203,7 +203,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 10,
       set_3: 9,
-      training_volume: 710,
+      training_volume: 580,
       date: '2023-04-03',
     },
     {
@@ -214,7 +214,7 @@ exports.seed = async function (knex) {
       set_1: 6,
       set_2: 5,
       set_3: 6,
-      training_volume: 930,
+      training_volume: 850,
       date: '2023-04-04',
     },
     {
@@ -225,7 +225,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 5,
       set_3: 5,
-      training_volume: 510,
+      training_volume: 540,
       date: '2023-04-04',
     },
     {
@@ -236,7 +236,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 6,
       set_3: 7,
-      training_volume: 510,
+      training_volume: 420,
       date: '2023-04-04',
     },
     {
@@ -247,7 +247,7 @@ exports.seed = async function (knex) {
       set_1: 6,
       set_2: 6,
       set_3: 6,
-      training_volume: 540,
+      training_volume: 450,
       date: '2023-04-04',
     },
     {
@@ -258,7 +258,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 9,
       set_3: 8,
-      training_volume: 690,
+      training_volume: 540,
       date: '2023-04-04',
     },
     {
@@ -269,7 +269,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 10,
       set_3: 9,
-      training_volume: 710,
+      training_volume: 580,
       date: '2023-04-04',
     },
     {
@@ -291,7 +291,7 @@ exports.seed = async function (knex) {
       set_1: 7,
       set_2: 6,
       set_3: 6,
-      training_volume: 735,
+      training_volume: 665,
       date: '2023-04-05',
     },
     {
@@ -302,7 +302,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 7,
-      training_volume: 465,
+      training_volume: 345,
       date: '2023-04-05',
     },
     {
@@ -313,7 +313,7 @@ exports.seed = async function (knex) {
       set_1: 6,
       set_2: 7,
       set_3: 6,
-      training_volume: 510,
+      training_volume: 380,
       date: '2023-04-05',
     },
     {
@@ -324,7 +324,7 @@ exports.seed = async function (knex) {
       set_1: 9,
       set_2: 8,
       set_3: 7,
-      training_volume: 660,
+      training_volume: 360,
       date: '2023-04-05',
     },
     {
@@ -335,7 +335,7 @@ exports.seed = async function (knex) {
       set_1: 7,
       set_2: 6,
       set_3: 7,
-      training_volume: 660,
+      training_volume: 500,
       date: '2023-04-05',
     },
 
@@ -349,7 +349,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 10,
       set_3: 10,
-      training_volume: 3000,
+      training_volume: 5400,
       date: '2023-03-29',
     },
     {
@@ -393,7 +393,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 15,
       set_3: 15,
-      training_volume: 3375,
+      training_volume: 2250,
       date: '2023-03-29',
     },
     {
@@ -404,7 +404,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 8,
-      training_volume: 3840,
+      training_volume: 4800,
       date: '2023-03-30',
     },
     {
@@ -437,7 +437,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 8,
-      training_volume: 2160,
+      training_volume: 2280,
       date: '2023-03-30',
     },
     {
@@ -448,7 +448,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 15,
       set_3: 15,
-      training_volume: 3375,
+      training_volume: 2475,
       date: '2023-03-30',
     },
     {
@@ -459,7 +459,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 8,
-      training_volume: 3648,
+      training_volume: 4560,
       date: '2023-04-06',
     },
     {
@@ -503,7 +503,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 15,
       set_3: 15,
-      training_volume: 3375,
+      training_volume: 2250,
       date: '2023-04-06',
     },
     {
@@ -558,7 +558,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 15,
       set_3: 15,
-      training_volume: 5063,
+      training_volume: 2475,
       date: '2023-04-07',
     },
     {
@@ -613,7 +613,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 15,
       set_3: 15,
-      training_volume: 6750,
+      training_volume: 2700,
       date: '2023-04-09',
     },
     //Chest/back(mid back)
@@ -658,7 +658,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 8,
-      training_volume: 4400,
+      training_volume: 4440,
       date: '2023-04-10',
     },
     {
@@ -691,7 +691,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 8,
-      training_volume: 2784,
+      training_volume: 3480,
       date: '2023-04-11',
     },
     {
@@ -757,7 +757,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 8,
       set_3: 8,
-      training_volume: 2880,
+      training_volume: 3600,
       date: '2023-04-15',
     },
     {
@@ -823,7 +823,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 10,
       set_3: 12,
-      training_volume: 4280,
+      training_volume: 4950,
       date: '2023-04-28',
     },
     {
@@ -845,7 +845,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1420,
+      training_volume: 1500,
       date: '2023-04-28',
     },
     {
@@ -856,7 +856,7 @@ exports.seed = async function (knex) {
       set_1: 6,
       set_2: 8,
       set_3: 10,
-      training_volume: 3720,
+      training_volume: 5040,
       date: '2023-04-28',
     },
     {
@@ -867,7 +867,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 12,
       set_3: 10,
-      training_volume: 3540,
+      training_volume: 3840,
       date: '2023-04-28',
     },
     {
@@ -878,7 +878,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1340,
+      training_volume: 1650,
       date: '2023-04-28',
     },
     //chest/back(lats)
@@ -890,7 +890,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1340,
+      training_volume: 1650,
       date: '2023-04-28',
     },
     {
@@ -901,7 +901,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 8,
       set_3: 6,
-      training_volume: 960,
+      training_volume: 1680,
       date: '2023-04-28',
     },
     {
@@ -912,7 +912,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 12,
       set_3: 10,
-      training_volume: 1750,
+      training_volume: 1480,
       date: '2023-04-28',
     },
     {
@@ -923,7 +923,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 8,
       set_3: 6,
-      training_volume: 840,
+      training_volume: 1440,
       date: '2023-04-28',
     },
     {
@@ -934,7 +934,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1080,
+      training_volume: 1500,
       date: '2023-04-28',
     },
     {
@@ -945,7 +945,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1320,
+      training_volume: 1800,
       date: '2023-05-02',
     },
     {
@@ -956,7 +956,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 12,
       set_3: 10,
-      training_volume: 1075,
+      training_volume: 925,
       date: '2023-05-02',
     },
     {
@@ -967,7 +967,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1120,
+      training_volume: 1200,
       date: '2023-05-02',
     },
     {
@@ -978,7 +978,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 8,
       set_3: 6,
-      training_volume: 920,
+      training_volume: 1920,
       date: '2023-05-02',
     },
     {
@@ -989,7 +989,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 12,
       set_3: 10,
-      training_volume: 1320,
+      training_volume: 1110,
       date: '2023-05-02',
     },
     {
@@ -1000,7 +1000,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1380,
+      training_volume: 1950,
       date: '2023-05-05',
     },
     {
@@ -1011,7 +1011,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 12,
       set_3: 10,
-      training_volume: 1145,
+      training_volume: 999,
       date: '2023-05-05',
     },
     {
@@ -1022,7 +1022,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1170,
+      training_volume: 1260,
       date: '2023-05-05',
     },
     {
@@ -1033,7 +1033,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 8,
       set_3: 6,
-      training_volume: 990,
+      training_volume: 1968,
       date: '2023-05-05',
     },
     {
@@ -1044,7 +1044,7 @@ exports.seed = async function (knex) {
       set_1: 15,
       set_2: 12,
       set_3: 10,
-      training_volume: 1380,
+      training_volume: 1184,
       date: '2023-05-05',
     },
     {
@@ -1055,7 +1055,7 @@ exports.seed = async function (knex) {
       set_1: 8,
       set_2: 6,
       set_3: 4,
-      training_volume: 2280,
+      training_volume: 2430,
       date: '2023-05-12',
     },
     {
@@ -1066,7 +1066,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 2040,
+      training_volume: 2550,
       date: '2023-05-12',
     },
     {
@@ -1077,7 +1077,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1800,
+      training_volume: 2100,
       date: '2023-05-12',
     },
     {
@@ -1088,7 +1088,7 @@ exports.seed = async function (knex) {
       set_1: 6,
       set_2: 4,
       set_3: 2,
-      training_volume: 840,
+      training_volume: 1860,
       date: '2023-05-12',
     },
     {
@@ -1099,7 +1099,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 2300,
+      training_volume: 2850,
       date: '2023-05-12',
     },
     {
@@ -1110,7 +1110,7 @@ exports.seed = async function (knex) {
       set_1: 10,
       set_2: 8,
       set_3: 6,
-      training_volume: 2520,
+      training_volume: 3360,
       date: '2023-06-05',
     },
     {
@@ -1121,7 +1121,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 2040,
+      training_volume: 2700,
       date: '2023-06-05',
     },
     {
@@ -1132,7 +1132,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 1950,
+      training_volume: 2250,
       date: '2023-06-05',
     },
     {
@@ -1143,7 +1143,7 @@ exports.seed = async function (knex) {
       set_1: 6,
       set_2: 4,
       set_3: 2,
-      training_volume: 960,
+      training_volume: 1920,
       date: '2023-06-05',
     },
     {
@@ -1154,7 +1154,7 @@ exports.seed = async function (knex) {
       set_1: 12,
       set_2: 10,
       set_3: 8,
-      training_volume: 2400,
+      training_volume: 3000,
       date: '2023-06-05',
     },
   ]);
