@@ -37,7 +37,7 @@ exports.getWorkouts = (req, res) => {
 
 exports.loadWorkout = (req, res) => {
     const { user_id } = req.user
-    const { id } = req.params
+    const { id } = req.params //workout ID
 
     knex('exercises')
         .select(
@@ -46,9 +46,10 @@ exports.loadWorkout = (req, res) => {
             'preset-workouts.id as workout_id',
             'preset-workouts.workout_name'
         )
-        .join('preset-workouts', 'preset-workouts.id', 'exercises.workout_id')
+        .join('exercise-workout-relationships', 'exercise-workout-relationships.exercise_id', 'exercises.id')
+        .join('preset-workouts', 'preset-workouts.id', 'exercise-workout-relationships.workout_id')
         .where('exercises.user_id', user_id)
-        .andWhere('exercises.workout_id', id)
+        .andWhere('exercise-workout-relationships.workout_id', id)
         .then((data) => {
             res.status(200).send(data)
         })

@@ -22,24 +22,6 @@ exports.postExerciseData = (req, res) => {
         }
     })
 
-    // const newItem = req.body.map(item => {
-    //     const clientDate = new Date(item.dateBody.currentDate);
-    //     const timeZoneOffsetMinutes = parseInt(item.dateBody.timeZoneOffset);
-    //     const serverDate = new Date(clientDate.getTime() + (timeZoneOffsetMinutes * 60000));
-
-    //     return {
-    //         user_id: user_id,
-    //         id: uuidv4(),
-    //         date: serverDate.toISOString(),
-    //         exercise_id: item.exercise_id,
-    //         weight_lbs: item.weight_lbs,
-    //         set_1: item.set_1,
-    //         set_2: item.set_2,
-    //         set_3: item.set_3,
-    //         training_volume: item.training_volume,
-    //     };
-    // });
-
     knex('exercise-data')
         .insert(newItem)
         .then(() => {

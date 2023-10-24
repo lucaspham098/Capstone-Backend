@@ -12,11 +12,6 @@ exports.up = function (knex) {
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
             .notNullable()
-        table
-            .uuid('workout_id')
-            .references('preset-workouts.id')
-            .onUpdate('CASCADE')
-            .onDelete('CASCADE')
         table.timestamps(true, true)
     })
 };
