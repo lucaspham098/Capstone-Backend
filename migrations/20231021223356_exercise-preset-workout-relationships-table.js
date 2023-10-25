@@ -5,6 +5,14 @@
 exports.up = function (knex) {
     return knex.schema.createTable('exercise-workout-relationships', (table) => {
         table.uuid('id').primary()
+
+        table
+            .uuid("user_id")
+            .references("users.id")
+            .onUpdate('CASCADE')
+            .onDelete('CASCADE')
+            .notNullable()
+
         table
             .uuid('exercise_id')
             .references("exercises.id")
