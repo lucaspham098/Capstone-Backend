@@ -48,6 +48,7 @@ exports.getExerciseByDate = (req, res) => {
         })
         .catch(err => {
             res.status(400).send(`could not retreive data ${err}`)
+            console.log(err)
         })
 }
 
@@ -62,7 +63,8 @@ exports.getAllDataByWorkout = (req, res) => {
             'exercise-data.weight_lbs'
         )
         .join('exercise-data', 'exercise-data.exercise_id', 'exercises.id')
-        .where('exercises.workout_id', id)
+        .join('exercise-workout-relationships', 'exercise-workout-relationships.exercise_id', 'exercises.id')
+        .where('exercise-workout-relationships.workout_id', id)
         .andWhere('exercises.user_id', user_id)
         .andWhere('exercise-data.user_id', user_id)
         .then((data) => {
@@ -88,7 +90,8 @@ exports.getDataByDate = (req, res) => {
             'preset-workouts.workout_name'
         )
         .join('exercise-data', 'exercises.id', 'exercise-data.exercise_id')
-        .join('preset-workouts', 'preset-workouts.id', 'exercises.workout_id')
+        .join('exercise-workout-relationships', 'exercise-workout-relationships.exercise_id', 'exercises.id')
+        .join('preset-workouts', 'preset-workouts.id', 'exercise-workout-relationships.workout_id')
         .where('exercise-data.date', date)
         .andWhere('exercise-data.user_id', user_id)
         .then(data => {
@@ -101,7 +104,7 @@ exports.getDataByDate = (req, res) => {
 
 exports.getWorkoutByDate = (req, res) => {
     const { user_id } = req.user
-    const { id } = req.params
+    const { id } = req.params //workout id
     const { date } = req.params
 
     knex('exercises')
@@ -115,8 +118,8 @@ exports.getWorkoutByDate = (req, res) => {
 
         )
         .join('exercise-data', 'exercise-data.exercise_id', 'exercises.id')
-        .where('exercises.workout_id', id)
-        .andWhere('exercises.user_id', user_id)
+        .where('exercises.user_id', user_id)
+        .andWhere('exercise-data.workout_id', id)
         .andWhere('exercise-data.user_id', user_id)
         .andWhere('exercise-data.date', date)
         .then((data) => {
@@ -124,6 +127,7 @@ exports.getWorkoutByDate = (req, res) => {
         })
         .catch(err => {
             res.status(400).send(err)
+            console.log(err)
         })
 }
 
