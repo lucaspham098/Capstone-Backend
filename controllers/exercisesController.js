@@ -39,9 +39,13 @@ exports.getExercises = (req, res) => {
 exports.addToWorkout = (req, res) => {
     const { user_id } = req.user
     const promises = req.body.map(item => {
-        console.log(item)
+        const newItem = {
+            ...item,
+            user_id: user_id
+        }
+        console.log(newItem)
         return knex('exercise-workout-relationships')
-            .insert(item)
+            .insert(newItem)
     })
 
     Promise.all(promises)
@@ -102,6 +106,7 @@ exports.getExercisesNotInWorkout = (req, res) => {
         .select('exercises.id as exercise_id', 'exercise_name')
         .leftJoin('exercise-workout-relationships', 'exercise-workout-relationships.exercise_id', 'exercises.id')
         .where('exercise-workout-relationships.workout_id', '<>', id)
+        .andWhere('exercise-workout-relationships.user_id', user_id)
         .orWhereNull('exercise-workout-relationships.workout_id')
         .andWhere('exercises.user_id', user_id)
         .then(data => {
