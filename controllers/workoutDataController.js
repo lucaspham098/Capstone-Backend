@@ -79,23 +79,26 @@ exports.getDataByDate = (req, res) => {
     const { user_id } = req.user
     const { date } = req.params
 
-    knex('exercises')
+    console.log(date)
+
+    knex('exercise-data')
         .select(
             'exercise-data.date',
             'exercise-data.weight_lbs',
             'exercise-data.set_1',
             'exercise-data.set_2',
             'exercise-data.set_3',
+            'exercise-data.workout_id',
             'exercises.exercise_name',
             'preset-workouts.workout_name'
         )
-        .join('exercise-data', 'exercises.id', 'exercise-data.exercise_id')
-        .join('exercise-workout-relationships', 'exercise-workout-relationships.exercise_id', 'exercises.id')
-        .join('preset-workouts', 'preset-workouts.id', 'exercise-workout-relationships.workout_id')
+        .join('exercises', 'exercises.id', 'exercise-data.exercise_id')
+        .join('preset-workouts', 'preset-workouts.id', 'exercise-data.workout_id')
         .where('exercise-data.date', date)
         .andWhere('exercise-data.user_id', user_id)
         .then(data => {
             res.status(200).send(data)
+            console.log(data)
         })
         .catch(err => {
             console.log(err)
