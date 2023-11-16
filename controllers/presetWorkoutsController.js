@@ -69,13 +69,28 @@ exports.deleteWorkout = (req, res) => {
         .then(() => {
             res.status(200).send('item deleted')
         })
-        .catch(err => {
-            res.status(400).send(`item not deleted ${err}`)
-            console.log(err)
-        })
-
         .catch((err) => {
             res.status(400).send(`unable to change workout_id of exercise ${err}`)
             console.log(err)
         })
 }
+
+exports.changeIDtoNull = (req, res, next) => {
+    const { user_id } = req.user
+    const { id } = req.params
+
+    knex('exercise-data')
+        .update({ workout_id: null })
+        .where('user_id', user_id)
+        .andWhere('workout_id', id)
+        .then(() => {
+            // res.send('WorkoutID changed to Null')
+            console.log('updated workout ID to null')
+            next()
+        })
+        .catch((err) => {
+            res.send(`Unable to change workout ID to Null ${err}`)
+            console.log(err)
+        })
+}
+
