@@ -26,7 +26,6 @@ exports.up = function (knex) {
             .references('preset-workouts.id')
             .onUpdate('CASCADE')
             .onDelete('CASCADE')
-            .notNullable()
 
         table.integer('weight_lbs').notNullable()
         table.integer('set_1').notNullable()
